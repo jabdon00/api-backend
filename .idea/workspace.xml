@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ffd1ff-49f3-48ba-beda-4a5069edef06" name="Default Changelist" comment="first initialzie and add core engine with devise" />
+    <list default="true" id="51ffd1ff-49f3-48ba-beda-4a5069edef06" name="Default Changelist" comment="first initialzie and add core engine with devise">
+      <change afterPath="$PROJECT_DIR$/engines/api/lib/rw_api.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,13 +36,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="SQL Resolution Scopes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/engines/core/lib/rw" />
-      <recent name="$PROJECT_DIR$/engines/core/app/models/rw" />
-      <recent name="$PROJECT_DIR$/engines/core/app/controllers/rw" />
+      <recent name="$PROJECT_DIR$/engines/api/lib/tasks/rw" />
+      <recent name="$PROJECT_DIR$/engines/api/lib/rw" />
+      <recent name="$PROJECT_DIR$/engines/api/app/helpers/rw" />
+      <recent name="$PROJECT_DIR$/engines/api/app/jobs/rw" />
+      <recent name="$PROJECT_DIR$/engines/api/app/mailers/rw" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: api-backend">
@@ -152,7 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620217588558</updated>
-      <workItem from="1620217589852" duration="10424000" />
+      <workItem from="1620217589852" duration="12652000" />
     </task>
     <task id="LOCAL-00001" summary="first initialzie and add core engine with devise">
       <created>1620239607731</created>
@@ -161,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620239607731</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first initialzie and add core engine with devise">
+      <created>1620248231614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620248231614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
