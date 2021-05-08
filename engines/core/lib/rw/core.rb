@@ -1,4 +1,5 @@
 require 'devise'
+require 'jwt'
 
 module Rw
   module Core

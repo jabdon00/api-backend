@@ -16,4 +16,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 6.1.3", ">= 6.1.3.2"
   spec.add_development_dependency 'pg'
   spec.add_dependency 'devise'
+  spec.add_dependency 'jwt'
+  spec.add_dependency 'bcrypt'
 end
