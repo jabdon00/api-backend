@@ -4,7 +4,7 @@ module Rw
       skip_before_action :verify_authenticity_token
 
       def create
-        user = User.find_by_email(sign_in_params[:email])
+        user = Rw::User.find_by_email(sign_in_params[:email])
 
         if user && user.valid_password?(sign_in_params[:password])
           token = user.generate_jwt
