@@ -1,0 +1,100 @@
+fa:
+  users:
+    verified: 'تایید شده'
+    not_verified: 'تایید نشده'
+  errors:
+    exception:
+      title: 'خطای نامشخصی رخ داده است'
+      detail: 'خطایی در بخشی از سیستم رخ داده است. جزییات این خطا برای شرکت پشتیبان ارسال شد.'
+    unauthorized:
+      title: 'Unauthorized'
+      detail: 'برای اجرای این درخواست باید لاگین کنید.'
+    not_found:
+      title: 'Not Found'
+      detail: 'رکورد مورد نظر یافت نشد.'
+    not_verified:
+      title: 'Not Verified'
+      detail: 'تصویر تایید نشد.'
+    food_not_found:
+      title: 'Food Not Found'
+      detail: 'با پارامترهای ورودی غذای مورد نظر یافت نشد.'
+    not_validated:
+      title: 'Not Validated'
+      detail: 'پارامترهای ارسال شده معتبر نیستند.'
+    verification_code_not_validated:
+      title: 'Verification Code Not Validated'
+      detail: 'پارامترهای ارسال شده معتبر نیستند.'
+    widget_date_out_of_range:
+      title: 'Widget Date Out Of Range'
+      detail: 'تاریخ ابزارک درخواست شده خارج از محدوده است.'
+    not_enough_credit:
+      title: 'Not Enough Credit'
+      detail: 'اعتبار کاربر کافی نیست.'
+    not_enough_days:
+      title: 'NotEnoughDays'
+      detail: 'تعداد روزهای درخواست شده از حداقل تعیین شده کمتر است.'
+    permission_error:
+      title: 'Permission Error'
+      detail: 'دسترسی مجاز نیست.'
+    payment_error:
+      title: 'Payment Error'
+      detail: 'خطا در پرداخت الکترونیک.'
+    api_error:
+      title: 'API Error'
+      detail: 'خطا در اجرای API.'
+    success:
+      title: 'Success!'
+      detail: 'با موفقیت انجام شد.'
+
+  activemodel:
+    errors:
+      models:
+        user:
+          attributes:
+            mobile_number:
+              blank: 'نمیتواند خالی باشد.'
+              taken: 'قبلا ثبت شده است.'
+            code:
+              taken: 'قبلا ثبت شده است.'
+            email:
+              taken: 'قبلا ثبت شده است.'
+        verification_param:
+          attributes:
+            user_id:
+              blank: 'نمیتواند خالی باشد.'
+            mobile_number:
+              blank: 'نمیتواند خالی باشد.'
+        widget_user:
+          attributes:
+            user_id:
+              has_widget: 'ابزارک فعال وجود دارد.'
+        register_param:
+          attributes:
+            token:
+              blank: 'نمیتواند خالی باشد.'
+            mobile_number:
+              blank: 'نمیتواند خالی باشد.'
+            university_code:
+              blank: 'نمیتواند خالی باشد.'
+        widgets_param:
+          attributes:
+            token:
+              blank: 'نمیتواند خالی باشد.'
+            university_code:
+              blank: 'نمیتواند خالی باشد.'
+        membership_param:
+          attributes:
+            university_code:
+              blank: 'نمیتواند خالی باشد.'
+        relation:
+          attributes:
+            user_id_key_value:
+              taken: 'قبلا ثبت شده است.'
+        avatar_upload_param:
+          attributes:
+            avatar:
+              blank:  'پارامتر تصویر نمیتواند خالی باشد.'
+            mobile_number:
+              blank: 'مقدار شماره موبایل نمیتواند خالی باشد'
+            university_code:
+              blank: 'مقدار کد دانشگاه نمیتواند خالی باشد'

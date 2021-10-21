@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 6.1.3", ">= 6.1.3.2"
   spec.add_dependency 'rw_core' , '0.1.0'
   spec.add_development_dependency 'pg'
+  spec.add_dependency 'reform', '2.6'
+  spec.add_dependency 'fast_jsonapi'  
 end

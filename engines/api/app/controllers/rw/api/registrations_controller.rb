@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Rw
   module Api
     class RegistrationsController < Devise::RegistrationsController
@@ -9,7 +11,7 @@ module Rw
 
         if user.save
           token = user.generate_jwt
-          render json: {token: token, status: 200}
+          render json: { token: token, status: 200 }
         else
           render json: { errors: { 'email or password' => ['is invalid'] } }, status: :unprocessable_entity
         end
@@ -18,7 +20,6 @@ module Rw
       def sign_up_params
         params.require(:user).permit(:email, :password, :password_confirmation)
       end
-
     end
   end
 end

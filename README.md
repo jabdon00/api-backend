@@ -1,7 +1,7 @@
 # README
 
 
-* Ruby version 3.0.1
+* Ruby version 3.0.2
 * Rails version 6.1.3.1
 
 * base in postgresql 
