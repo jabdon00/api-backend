@@ -1,5 +1,5 @@
 module Rw
-  class Success < Dk::StandardError
+  class Success < Rw::StandardError
     def initialize
       super(
           title: I18n.t(:'errors.success.title'),

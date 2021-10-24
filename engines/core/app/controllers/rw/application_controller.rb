@@ -1,24 +1,20 @@
 module Rw
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ActionController::Base    
     respond_to :json
     before_action :process_token
 
     rescue_from Rw::NotValidated, with: :render_error
-    rescue_from Rw::NotEnoughDays, with: :render_error
     rescue_from Rw::PermissionError, with: :render_error
-    rescue_from Rw::NotEnoughCredit, with: :render_error
-    rescue_from Rw::WidgetDateOutOfRange, with: :render_error
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     rescue_from Rw::NotFound, with: :render_error
     rescue_from Rw::NotVerified, with: :render_error
     rescue_from Rw::Unauthorized, with: :render_error
-    rescue_from Rw::PaymentError, with: :render_error
     rescue_from JWT::DecodeError, with: :render_error
-    rescue_from Rw::VerificationCodeNotValidated, with: :render_error
+ 
 
     private
 
-    def render_error(e)
+    def render_error(e)      
       render json: Rw::ErrorSerializer.new(e), status: e.status
     end
   

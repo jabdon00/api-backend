@@ -8,7 +8,7 @@ module Rw
         serializable_hash
       end
   
-      def to_json
+      def to_json(payload)
         to_h.to_json
       end
   

@@ -1,5 +1,5 @@
 module Rw
-  class ApiError < Dk::StandardError
+  class ApiError < Rw::StandardError
     def initialize
       super(
           title: I18n.t(:'errors.api_error.title'),

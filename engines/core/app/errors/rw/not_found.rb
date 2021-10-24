@@ -1,5 +1,5 @@
 module Rw
-  class NotFound < Dk::StandardError
+  class NotFound < Rw::StandardError
     def initialize
       super(
           title: I18n.t(:'errors.not_found.title'),

@@ -29,6 +29,6 @@ module Rw::ErrorHandler
   end
 
   def render_error(error)
-    render json: Dk::ErrorSerializer.new([error]), status: error.status
+    render json: Rw::ErrorSerializer.new([error]), status: error.status
   end
 end

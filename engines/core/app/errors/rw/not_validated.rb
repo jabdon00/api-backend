@@ -1,5 +1,5 @@
 module Rw
-  class NotValidated < Dk::StandardError
+  class NotValidated < Rw::StandardError
     def initialize(errors)
       super(
           title: I18n.t(:'errors.not_validated.title'),

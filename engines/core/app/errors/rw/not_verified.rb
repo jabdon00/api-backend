@@ -1,5 +1,5 @@
 module Rw
-  class NotVerified < Dk::StandardError
+  class NotVerified < Rw::StandardError
     def initialize
       super(
           title: I18n.t(:'errors.not_verified.title'),

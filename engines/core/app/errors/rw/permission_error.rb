@@ -1,5 +1,5 @@
 module Rw
-  class PermissionError < Dk::StandardError
+  class PermissionError < Rw::StandardError
     def initialize
       super(
           title: I18n.t(:'errors.permission_error.title'),

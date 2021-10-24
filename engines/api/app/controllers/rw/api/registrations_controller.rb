@@ -10,7 +10,7 @@ module Rw
         user = Rw::User.new(sign_up_params)
 
         if user.save
-          token = user.generate_jwt
+          token = Rw::JWtUtils::GenerateJwt.call(user: user)
           render json: { token: token, status: 200 }
         else
           render json: { errors: { 'email or password' => ['is invalid'] } }, status: :unprocessable_entity

@@ -1,5 +1,5 @@
 module Rw
-  class Unauthorized < Dk::StandardError
+  class Unauthorized < Rw::StandardError
     def initialize
       super(
           title: I18n.t(:'errors.unauthorized.title'),
