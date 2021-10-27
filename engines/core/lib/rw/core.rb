@@ -1,3 +1,5 @@
+require 'fast_jsonapi'
+require 'interactor'
 require 'devise'
 require 'jwt'
 

@@ -19,6 +19,7 @@ PATH
       parsi-date
       rails (~> 6.1.3, >= 6.1.3.2)
       reform (~> 2.6)
+      tzinfo-data
 
 GEM
   remote: https://rubygems.org/

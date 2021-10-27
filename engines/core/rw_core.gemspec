@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'parsi-date'
   spec.add_dependency 'reform', '~> 2.6'
   spec.add_dependency 'interactor'
+  spec.add_dependency 'tzinfo-data'
 end

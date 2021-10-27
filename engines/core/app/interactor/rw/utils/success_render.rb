@@ -4,13 +4,13 @@ module Rw
             include Interactor
         
             def call
-                e = Dk::Success.new
-                result = Dk::ErrorSerializer.new(e).to_h
-                result = result.merge(context.object) if context.object
+                e = Rw::Success.new
+                result = Rw::ErrorSerializer.new(e).to_h
+                result = result.merge({result: context.object}) if context.object
                 context.result = result
                 context.state = e.status
             end
-          end
+          
         end        
     end
 end

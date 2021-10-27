@@ -16,7 +16,7 @@ module Rw
   
       def serializable_hash
         {
-            errors: Array.wrap(error.serializable_hash).flatten
+            messages: Array.wrap(error.serializable_hash).flatten
         }
       end
   
