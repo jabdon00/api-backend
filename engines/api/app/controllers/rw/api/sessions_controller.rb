@@ -7,7 +7,10 @@ module Rw
         user = Rw::User.find_by_email(sign_in_params[:email])        
         if user && user.valid_password?(sign_in_params[:password])
           token =  Rw::JwtUtils::GenerateJwt.call(user: user).result                    
-          success = Rw::Utils::SuccessRender.call(object: {token: token, role: user.role, email: user.email})          
+          success = Rw::Utils::SuccessRender.call(object: {token: token, 
+                                                           role: user.role, 
+                                                           email: user.email, 
+                                                           permissions: Rw::Utils::Permission.call(user: user).result})          
           render json: success.result, status: success.status
         else          
           e = Rw::NotValidated.new( I18n.t(:'errors.not_validated.detail'))
