@@ -5,14 +5,26 @@ module Rw
 
             def call
                 permissionTable = [
-                    {path: '/' , user: true , admin: true, supervisor: true , add: true , edit: true, delete: true},
-                    {path: '/dashboard' , user: false , admin: true, supervisor: true , add: true , edit: true, delete: true}
+                    {path: '/' , user: true , supervisor: true },
+                    {path: '/dashboard' , user: false , supervisor: true }
                 ]                
+                userDetailPermission = [{path: '/', add: true, edit: true, delete: true},
+                                                         {path: '/dashboard', add: true, edit: true, delete: true}   
+                    ]
+                supervisorDetailPermission = [{path: '/', add: true, edit: true, delete: true},
+                                                                    {path: '/dashboard', add: true, edit: true, delete: true}   
+                ]
                 admin = context.user.admin?
                 supervisor = context.user.supervisor?
                 user = context.user.user?
-                context.result = permissionTable.find_all{ |x| x[:admin] == admin || x[:supervisor] == supervisor || x[:user] == user }
-                    
+                if(admin)
+                    context.permissionTable = permissionTable
+                else    
+                    context.permissionTable = permissionTable.find_all{ |x| x[:supervisor] == supervisor || x[:user] == user }
+                end    
+                
+                context.userDetailPermission = userDetailPermission
+                context.supervisorDetailPermission = supervisorDetailPermission    
             end
         end
     end
