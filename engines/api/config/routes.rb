@@ -15,6 +15,7 @@ Rw::Core::Engine.routes.draw do
                              sessions: 'rw/api/sessions',
                              registrations: 'rw/api/registrations'
                            }
+        get 'user/user_list' ,to: 'user#user_list', as: :user_list
       end
     end
   end
