@@ -12,11 +12,7 @@ module Rw
          
     def set_default_role
       self.role ||= :user
-    end           
-
-    def generate_jwt
-      JWT.encode({id: id, exp: 60.days.from_now.to_i}, Devise.secret_key,'HS256')
-    end
+    end               
 
   end
 end

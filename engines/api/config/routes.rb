@@ -2,8 +2,8 @@
 
 Rw::Core::Engine.routes.draw do
   scope module: 'api', defaults: { format: :json } do
-    namespace :api do
-      namespace :v1 do
+    scope :api do
+      scope :v1 do
         devise_for :users, class_name: 'Rw::User', module: :devise,
                            path: '',
                            path_names: {
@@ -15,7 +15,7 @@ Rw::Core::Engine.routes.draw do
                              sessions: 'rw/api/sessions',
                              registrations: 'rw/api/registrations'
                            }
-        get 'user/user_list' ,to: 'user#user_list', as: :user_list
+        get 'user/user_list', to: 'user#user_list', as: :user_list, controller: 'rw/api/user_controller'
       end
     end
   end
