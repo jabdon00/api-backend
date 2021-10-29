@@ -30,14 +30,14 @@ class UserForm < Reform::Form
 
   def unique_mobile_number
     return if mobile_number.to_s == ''
-    return unless Dk::User.where('mobile_number = ? and id <> ?', mobile_number, id.to_i).count > 0
+    return unless Rw::User.where('mobile_number = ? and id <> ?', mobile_number, id.to_i).count > 0
 
     errors.add(:mobile_number, I18n.t(:'activemodel.errors.models.user.attributes.mobile_number.taken'))
   end
 
   def unique_email
     return if email.to_s == ''
-    return unless Dk::User.where('email = ? and id <> ?', email, id.to_i).count > 0
+    return unless Rw::User.where('email = ? and id <> ?', email, id.to_i).count > 0
 
     errors.add(:email, I18n.t(:'activemodel.errors.models.user.attributes.email.taken'))
   end
